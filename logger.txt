@@ -1,0 +1,9 @@
+/**
+ * Temporary function to log processing time and params plus flow. 
+ * @param type string, array
+ */
+function logger($data)
+{
+
+    file_put_contents("curl_log.txt", PHP_EOL . " [" . date("Y-M-d h:i:s A") . " {{Execution-Time(" . microtime(true) . ") }}] " . $data . PHP_EOL, FILE_APPEND);
+}
